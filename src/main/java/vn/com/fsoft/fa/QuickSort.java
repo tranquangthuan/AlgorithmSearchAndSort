@@ -10,17 +10,17 @@ public class QuickSort {
 
 	// ham de chia mang thanh 2 phan, su dung phan tu chot (pivot)
 	public int partition(int arr[], int left, int right, int pivot) {
-		int leftPointer = left - 1;
-		int rightPointer = right;
+		int leftPointer = left;
+		int rightPointer = right - 1;
 
 		while (true) {
 
-			while (arr[++leftPointer] < pivot) {
-				// khong lam gi
+			while (arr[leftPointer] < pivot) {
+				++leftPointer;
 			}
 
-			while (rightPointer > 0 && arr[--rightPointer] > pivot) {
-				// khong lam gi
+			while (rightPointer > 0 && arr[rightPointer] > pivot) {
+				--rightPointer;
 			}
 
 			if (leftPointer >= rightPointer) {
@@ -65,6 +65,7 @@ public class QuickSort {
 	public static void main(String[] args) {
 		// khoi tao mang arr
 		int arr[] = { 6, 7, 0, 2, 8, 1, 3, 9, 4, 5 };
+		// int arr[] = { 4, 3, 0, 2, 1 };
 
 		QuickSort sapXepNhanh = new QuickSort();
 		System.out.println("Mang du lieu dau vao: ");
