@@ -26,13 +26,15 @@ public class QuickSort {
 			if (leftPointer >= rightPointer) {
 				break;
 			} else {
-				System.out.println(" Phan tu duoc trao doi: " + arr[leftPointer] + ", " + arr[rightPointer]);
+				System.out.println("PHAN TU duoc trao doi: " + arr[leftPointer] + ", " + arr[rightPointer]
+						+ " tai leftPointer = " + leftPointer + " rightPointer = " + rightPointer);
 				swap(arr, leftPointer, rightPointer);
+				display(arr);
 			}
-
 		}
 
-		System.out.println(" Phan tu chot duoc trao doi: " + arr[leftPointer] + ", " + arr[right]);
+		System.out.println("PHAN TU CHOT duoc trao doi: " + arr[leftPointer] + ", " + arr[right] + " tai leftPointer = "
+				+ leftPointer + " right = " + right);
 		swap(arr, leftPointer, right);
 		display(arr);
 		return leftPointer;
